@@ -5,7 +5,8 @@
 ## 项目相关
 
 nest.js 框架
-sql 相关：`mysql`、`mysql-workbench`
+
+sql 相关：`mysql`、`mysql-workbench`，位于`assets`文件夹
 
 相关技术栈详情，项目命令详情可查看：package.json
 
