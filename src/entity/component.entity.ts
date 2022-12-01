@@ -3,9 +3,6 @@ import { Base } from './base.entity';
 
 @Entity()
 export class Component extends Base<Component> {
-  @Column('int')
-  userId: number;
-
   @Column({ type: 'int' })
   classifyId: number;
 

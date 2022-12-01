@@ -12,14 +12,6 @@ export class UploadComponentDTO extends UploadComponentVO {
   @IsString()
   originalname: string;
 
-  @Expose()
-  @IsInt()
-  userId: number;
-
-  @Expose()
-  @IsString()
-  role: string;
-
   constructor(params?: Partial<UploadComponentDTO>) {
     super(params);
   }

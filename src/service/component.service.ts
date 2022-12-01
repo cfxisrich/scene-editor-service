@@ -48,6 +48,10 @@ export class ComponentService {
     return `COMPONENT_PACKAGE--${id}`;
   }
 
+  private transPath(url: string) {
+    return url.replace(new RegExp(RESOURCES_PATH.replace(/\\/g, '/'), 'g'), '');
+  }
+
   /**
    * 上传组件
    * @param uploadFile
@@ -160,7 +164,6 @@ export class ComponentService {
 
     // 插入数据库
     const ComponentEntity = new Component({
-      userId: uploadFile.userId,
       classifyId: uploadFile.classifyId,
       packageDesp: packageJSON.description,
       packageName: packageJSON.name,
@@ -196,13 +199,17 @@ export class ComponentService {
         size,
         name: ComponentEntity.packageName,
         desp: ComponentEntity.packageDesp,
-        entry: `/Component/component/${id}/${
-          ComponentEntity.packageEntry.startsWith('/')
-            ? ComponentEntity.packageEntry.slice(1)
-            : ComponentEntity.packageEntry
-        }`,
-        preview: `/Component/preview/${id}`,
-        pkg: `/Component/pkg/${id}`,
+        entry: this.transPath(
+          `${ComponentEntity.packagePath}/${
+            ComponentEntity.packageEntry.startsWith('/')
+              ? ComponentEntity.packageEntry.slice(1)
+              : ComponentEntity.packageEntry
+          }`,
+        ),
+        preview: this.transPath(
+          `${ComponentEntity.packagePath}/${ComponentEntity.previewName}`,
+        ),
+        pkg: this.transPath(`${ComponentEntity.packagePath}/package.json`),
         classifyId: uploadFile.classifyId,
       });
     } catch (error) {
@@ -255,9 +262,15 @@ export class ComponentService {
             id: elem.id,
             name: elem.packageName,
             desp: elem.packageDesp,
-            entry: `/Component/component/${elem.id}/${elem.packageEntry}`,
-            preview: `/Component/preview/${elem.id}`,
-            pkg: `/Component/pkg/${elem.id}`,
+            entry: this.transPath(
+              `${elem.packagePath}/${
+                elem.packageEntry.startsWith('/')
+                  ? elem.packageEntry.slice(1)
+                  : elem.packageEntry
+              }`,
+            ),
+            preview: this.transPath(`${elem.packagePath}/${elem.previewName}`),
+            pkg: this.transPath(`${elem.packagePath}/package.json`),
             classifyId: elem.classifyId,
           });
         }),
@@ -317,7 +330,7 @@ export class ComponentService {
   /**
    * 删除分类
    */
-  async removeClassify(id: number, userId: number) {
+  async removeClassify(id: number) {
     // 分类下没东西才删除
     const childClassifyCount = await this.componentClassifyRepo.count({
       where: {
@@ -328,7 +341,7 @@ export class ComponentService {
 
     if (childClassifyCount) {
       this.logger.error(
-        `存在子分类，请先删除子分类 ---> id：${id}， userId：${userId}`,
+        `存在子分类，请先删除子分类 ---> id：${id}`,
         '',
         this.constructor.name + '.removeClassify',
       );
@@ -338,14 +351,13 @@ export class ComponentService {
     const modelsCount = await this.ComponentRepo.count({
       where: {
         classifyId: id,
-        userId,
         delete: false,
       },
     });
 
     if (modelsCount) {
       this.logger.error(
-        `存在子模型，请先删除子模型 ---> id：${id}， userId：${userId}`,
+        `存在子模型，请先删除子模型 ---> id：${id}`,
         '',
         this.constructor.name + '.removeClassify',
       );
@@ -379,7 +391,6 @@ export class ComponentService {
       Component = await this.ComponentRepo.findOne({
         where: {
           id,
-          userId,
           delete: false,
         },
       });
@@ -408,7 +419,6 @@ export class ComponentService {
     const Component = await this.ComponentRepo.findOne({
       where: {
         id,
-        userId,
         delete: false,
       },
     });
@@ -448,7 +458,6 @@ export class ComponentService {
     const Component = await this.ComponentRepo.findOne({
       where: {
         id,
-        userId,
         delete: false,
       },
     });
@@ -459,7 +468,7 @@ export class ComponentService {
 
     // 数据库删除
     const result = await this.ComponentRepo.update(
-      { id, userId, delete: false },
+      { id, delete: false },
       {
         delete: true,
       },
