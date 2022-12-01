@@ -4,7 +4,7 @@
   "description": "",
   "author": "Shiotsuki_",
   "private": false,
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
