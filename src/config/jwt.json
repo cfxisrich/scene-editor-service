@@ -1,0 +1,8 @@
+{
+  "secret": "aab6862c-6e50-b434-e664-a35c6388c13a",
+  "refreshExpiresIn": "12h",
+  "accessExpiresIn": "2h",
+  "signOptions": {
+    "expiresIn": "1h"
+  }
+}

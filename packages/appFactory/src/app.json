@@ -1,0 +1,285 @@
+{
+  "assets": [
+    "/texture/illust_65954626_20171120_163010-1669605393346.png",
+    "/texture/i54733536-1669605393318.png",
+    "/texture/38184560-1669605393302.png"
+  ],
+  "object3D": [],
+  "camera": [],
+  "light": [],
+  "geometry": [
+    {
+      "vid": "1066bd6a-f55b-425d-be3a-dae998c06a6a",
+      "type": "BoxGeometry",
+      "position": { "y": -1 },
+      "width": 200,
+      "depth": 100
+    },
+    {
+      "vid": "7413d345-bdd7-4471-8ec2-17a88eed83ac",
+      "type": "BoxGeometry",
+      "position": { "y": 1 },
+      "width": 200,
+      "height": 50
+    },
+    {
+      "vid": "9317fed4-692f-4a7a-8604-15a6559d0179",
+      "type": "PlaneGeometry",
+      "width": 16,
+      "height": 9
+    }
+  ],
+  "texture": [
+    {
+      "vid": "21abbf76-784e-4f09-b1c6-dc792cdda93a",
+      "type": "ImageTexture",
+      "name": "381845603a",
+      "url": "/texture/38184560-1669605393302.png"
+    },
+    {
+      "vid": "c1cc0d82-a04b-4f3e-bdf9-76d4ad0b76ef",
+      "type": "ImageTexture",
+      "name": "i54733536ef",
+      "url": "/texture/i54733536-1669605393318.png"
+    },
+    {
+      "vid": "6fbbf20d-1bb7-4178-be4e-51e76bff840f",
+      "type": "ImageTexture",
+      "name": "illust_65954626_20171120_1630100f",
+      "url": "/texture/illust_65954626_20171120_163010-1669605393346.png"
+    }
+  ],
+  "material": [
+    {
+      "vid": "c24f281a-5609-4989-b7e3-7b265458704d",
+      "type": "MeshStandardMaterial",
+      "name": "地面材质",
+      "color": "rgb(255, 81, 81)"
+    },
+    {
+      "vid": "71f4f1a5-6fa3-4bcf-a99d-677c14157423",
+      "type": "MeshStandardMaterial",
+      "name": "墙面材质",
+      "color": "rgb(248, 255, 116)"
+    },
+    {
+      "vid": "3c5769ee-8e26-4278-9bc2-4d468c0db53f",
+      "type": "MeshStandardMaterial",
+      "name": "标准网格材质3c",
+      "map": "21abbf76-784e-4f09-b1c6-dc792cdda93a"
+    },
+    {
+      "vid": "ee97ddc5-17a6-4bb0-a4f3-d3b3c7739dc6",
+      "type": "MeshStandardMaterial",
+      "name": "图片2",
+      "map": "c1cc0d82-a04b-4f3e-bdf9-76d4ad0b76ef"
+    },
+    {
+      "vid": "5c1ba752-b114-4275-af55-4ded60b6b67d",
+      "type": "MeshStandardMaterial",
+      "name": "图片3",
+      "map": "6fbbf20d-1bb7-4178-be4e-51e76bff840f"
+    }
+  ],
+  "renderer": [
+    {
+      "vid": "DEFUALT-WebGLRenderer",
+      "type": "WebGLRenderer",
+      "clearColor": "rgba(15, 15, 15, 1)",
+      "physicallyCorrectLights": true,
+      "shadowMap": { "enabled": true, "type": 1 },
+      "toneMapping": 2,
+      "toneMappingExposure": 0.33
+    }
+  ],
+  "scene": [
+    {
+      "vid": "DEFUALT-Scene",
+      "name": "默认场景",
+      "type": "Scene",
+      "children": [
+        "ecedfb6d-1c87-492f-b29d-fdbd1fc0639e",
+        "70a92a0d-9b76-43e2-92da-118eb41ee9b7",
+        "3054b4fd-9260-4333-abcc-4bba328ad9ee",
+        "004892c4-55c6-42f8-8900-64c06e6baae0",
+        "f8fdca55-9020-4312-a89b-39a6781d7549",
+        "ba36a4da-b571-4e96-a38e-35f668df2ad5",
+        "a9f240f9-eeac-4b69-9498-344e30317fde",
+        "ba78bc73-a964-4351-b0b4-2fd956891865",
+        "cb63f586-2a4c-4e81-9783-6c4e73636d2b",
+        "4f0ed2af-cc53-4049-8caa-78c4fe24c19b"
+      ],
+      "fog": { "type": "" }
+    }
+  ],
+  "controls": [
+    { "vid": "DEFUALT-TransformControls", "type": "TransformControls" },
+    { "vid": "DEFUALT-OrbitControls", "type": "OrbitControls" }
+  ],
+  "sprite": [],
+  "line": [],
+  "mesh": [
+    {
+      "vid": "ecedfb6d-1c87-492f-b29d-fdbd1fc0639e",
+      "name": "立方体9e",
+      "type": "Mesh",
+      "parent": "DEFUALT-Scene",
+      "material": "c24f281a-5609-4989-b7e3-7b265458704d",
+      "geometry": "1066bd6a-f55b-425d-be3a-dae998c06a6a"
+    },
+    {
+      "vid": "70a92a0d-9b76-43e2-92da-118eb41ee9b7",
+      "name": "立方体b7",
+      "type": "Mesh",
+      "position": { "z": -13.335806203368307 },
+      "parent": "DEFUALT-Scene",
+      "material": "71f4f1a5-6fa3-4bcf-a99d-677c14157423",
+      "geometry": "7413d345-bdd7-4471-8ec2-17a88eed83ac"
+    },
+    {
+      "vid": "3054b4fd-9260-4333-abcc-4bba328ad9ee",
+      "name": "环境光-ee",
+      "type": "AmbientLight",
+      "parent": "DEFUALT-Scene",
+      "icon": "#icondengpao"
+    },
+    {
+      "vid": "004892c4-55c6-42f8-8900-64c06e6baae0",
+      "name": "平行光-e0",
+      "type": "DirectionalLight",
+      "position": { "y": 75.41830077300524, "z": 79.95983477278725 },
+      "parent": "DEFUALT-Scene",
+      "intensity": 9,
+      "icon": "#icondengpao"
+    },
+    {
+      "vid": "f8fdca55-9020-4312-a89b-39a6781d7549",
+      "name": "图片1",
+      "type": "Mesh",
+      "position": {
+        "x": 66.96077623254759,
+        "y": 32.34144015132722,
+        "z": -10.563040047642357
+      },
+      "scale": { "x": 2, "y": 2, "z": 2 },
+      "parent": "DEFUALT-Scene",
+      "pointerdown": [
+        {
+          "name": "focusObject",
+          "params": {
+            "target": "f8fdca55-9020-4312-a89b-39a6781d7549",
+            "camera": "",
+            "space": "world",
+            "offset": { "x": 0, "y": 0, "z": 40 },
+            "delay": 0,
+            "duration": 1000,
+            "timingFunction": "EASING_QUADRATIC_INOUT",
+            "back": true
+          }
+        }
+      ],
+      "material": "5c1ba752-b114-4275-af55-4ded60b6b67d",
+      "geometry": "9317fed4-692f-4a7a-8604-15a6559d0179"
+    },
+    {
+      "vid": "ba36a4da-b571-4e96-a38e-35f668df2ad5",
+      "name": "矩形49-复制-1",
+      "type": "Mesh",
+      "position": {
+        "x": -61.672035424649195,
+        "y": 32.34144015132722,
+        "z": -10.563040047642357
+      },
+      "scale": { "x": 2, "y": 2, "z": 2 },
+      "parent": "DEFUALT-Scene",
+      "pointerdown": [
+        {
+          "name": "focusObject",
+          "params": {
+            "target": "ba36a4da-b571-4e96-a38e-35f668df2ad5",
+            "camera": "",
+            "space": "world",
+            "offset": { "x": 0, "y": 0, "z": 40 },
+            "delay": 0,
+            "duration": 1000,
+            "timingFunction": "EASING_QUADRATIC_INOUT",
+            "back": true
+          }
+        }
+      ],
+      "material": "3c5769ee-8e26-4278-9bc2-4d468c0db53f",
+      "geometry": "9317fed4-692f-4a7a-8604-15a6559d0179"
+    },
+    {
+      "vid": "a9f240f9-eeac-4b69-9498-344e30317fde",
+      "name": "矩形49-复制",
+      "type": "Mesh",
+      "position": {
+        "x": 0.26514560075644766,
+        "y": 32.34144015132722,
+        "z": -10.563040047642357
+      },
+      "scale": { "x": 2, "y": 2, "z": 2 },
+      "parent": "DEFUALT-Scene",
+      "pointerdown": [
+        {
+          "name": "focusObject",
+          "params": {
+            "target": "a9f240f9-eeac-4b69-9498-344e30317fde",
+            "camera": "",
+            "space": "world",
+            "offset": { "x": 0, "y": 0, "z": 40 },
+            "delay": 0,
+            "duration": 1000,
+            "timingFunction": "EASING_QUADRATIC_INOUT",
+            "back": true
+          }
+        }
+      ],
+      "material": "ee97ddc5-17a6-4bb0-a4f3-d3b3c7739dc6",
+      "geometry": "9317fed4-692f-4a7a-8604-15a6559d0179"
+    },
+    {
+      "vid": "ba78bc73-a964-4351-b0b4-2fd956891865",
+      "name": "点光-65",
+      "type": "PointLight",
+      "position": {
+        "x": -63.42566919233387,
+        "y": 27.49693653112255,
+        "z": 7.418923887271021
+      },
+      "parent": "DEFUALT-Scene",
+      "color": "rgb(172, 204, 255)",
+      "intensity": 20,
+      "distance": 45,
+      "icon": "#icondengpao"
+    },
+    {
+      "vid": "cb63f586-2a4c-4e81-9783-6c4e73636d2b",
+      "name": "点光-2b",
+      "type": "PointLight",
+      "position": { "y": 28.720957501687053 },
+      "parent": "DEFUALT-Scene",
+      "color": "rgb(179, 255, 230)",
+      "intensity": 7,
+      "distance": 60,
+      "icon": "#icondengpao"
+    },
+    {
+      "vid": "4f0ed2af-cc53-4049-8caa-78c4fe24c19b",
+      "name": "点光-9b",
+      "type": "PointLight",
+      "position": { "x": 66.79800814106845, "y": 28.624894986761284 },
+      "parent": "DEFUALT-Scene",
+      "color": "rgb(255, 217, 217)",
+      "intensity": 8.9,
+      "distance": 55,
+      "icon": "#icondengpao"
+    }
+  ],
+  "points": [],
+  "group": [],
+  "css3D": [],
+  "pass": [],
+  "animation": []
+}
