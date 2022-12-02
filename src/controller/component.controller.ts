@@ -74,12 +74,9 @@ export class ComponentController {
   }
 
   @Post('removeComponent')
-  async removeComponent(
-    @Body('id', ParseIntPipe) id: number,
-    @Request() request,
-  ) {
+  async removeComponent(@Body('id', ParseIntPipe) id: number) {
     return ResponseFormat.success(
-      await this.componentService.removeComponent(id, request.user.id),
+      await this.componentService.removeComponent(id),
     );
   }
 

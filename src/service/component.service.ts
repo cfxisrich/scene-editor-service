@@ -454,7 +454,7 @@ export class ComponentService {
   /**
    * 删除模型
    */
-  async removeComponent(id: number, userId: number) {
+  async removeComponent(id: number) {
     const Component = await this.ComponentRepo.findOne({
       where: {
         id,
@@ -476,7 +476,7 @@ export class ComponentService {
 
     if (!result.affected) {
       this.logger.error(
-        `删除模型失败！ ---> id：${id}， userId：${userId}`,
+        `删除模型失败！ ---> id：${id}`,
         '',
         this.constructor.name + '.removeComponent',
       );
