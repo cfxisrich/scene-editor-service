@@ -275,7 +275,7 @@ export class AppService {
   async buildApp(params: { id: number; publicPath: string; name: string }) {
     const appPath = path.resolve(this.rootPath, `./${params.id}`);
 
-    const JSONConfig = fs
+    let JSONConfig = fs
       .readFileSync(path.resolve(appPath, `./${this.appsStructure.config}`))
       .toString();
 
@@ -330,6 +330,14 @@ export class AppService {
         );
       }
     }
+
+    // 根据publicPath修改assets与对应的url
+    assets.forEach((url) => {
+      JSONConfig = JSONConfig.replace(
+        new RegExp(url, 'g'),
+        params.publicPath.slice(0, -1) + url,
+      );
+    });
 
     // 写入 config 执行复制
     await Promise.all([

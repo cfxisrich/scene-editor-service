@@ -15,6 +15,7 @@
 import { engine } from "@/assets/js/VisFrame";
 
 import app from "./app.json";
+import build from "../build.json";
 
 import { generateConfig, Template, CONFIGTYPE, uniqueSymbol } from "vis-three";
 
