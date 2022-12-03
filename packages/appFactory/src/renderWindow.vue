@@ -86,7 +86,9 @@ export default {
     // }
 
     const config = Template.handler(app, (objectConfig) =>
-      generateConfig(objectConfig.type, objectConfig, false)
+      generateConfig(objectConfig.type, objectConfig, {
+        strict: false,
+      })
     );
 
     await engine.loadConfigAsync(config);

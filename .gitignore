@@ -38,3 +38,8 @@ lerna-debug.log*
 resources
 temp/
 resources/user/
+packages/appFactory/dist
+packages/appFactory/public/model
+packages/appFactory/public/component
+packages/appFactory/public/image
+packages/appFactory/public/texture

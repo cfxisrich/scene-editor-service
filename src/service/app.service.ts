@@ -272,8 +272,8 @@ export class AppService {
   }
 
   // 打包app
-  async buildApp(id: number) {
-    const appPath = path.resolve(this.rootPath, `./${id}`);
+  async buildApp(params: { id: number; publicPath: string; name: string }) {
+    const appPath = path.resolve(this.rootPath, `./${params.id}`);
 
     const JSONConfig = fs
       .readFileSync(path.resolve(appPath, `./${this.appsStructure.config}`))
@@ -290,7 +290,9 @@ export class AppService {
       `./public/component`,
     );
 
-    const buildConfigPath = path.resolve(this.factoryPath, './src/app.json');
+    const appConfigPath = path.resolve(this.factoryPath, './src/app.json');
+
+    const buildConfigPath = path.resolve(this.factoryPath, './build.json');
 
     // 先清空standalone下的资源
     await Promise.all([
@@ -331,9 +333,18 @@ export class AppService {
 
     // 写入 config 执行复制
     await Promise.all([
-      FileUtil.writeFile(buildConfigPath, JSONConfig),
+      FileUtil.writeFile(appConfigPath, JSONConfig),
       Promise.all(copyDirPromiseList),
     ]);
+
+    // 写入build
+    await FileUtil.writeFile(
+      buildConfigPath,
+      JSON.stringify({
+        title: params.name,
+        publicPath: params.publicPath,
+      }),
+    );
 
     // 执行打包命令
     await FileUtil.exec('npm run build', {

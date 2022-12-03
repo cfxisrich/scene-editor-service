@@ -46,11 +46,6 @@ export class AppController {
     );
   }
 
-  @Post('build')
-  async build(@Body('id') id: number, @Request() request) {
-    return ResponseFormat.success(await this.appService.buildApp(id));
-  }
-
   @Get('list')
   async getList(
     @Request() request,

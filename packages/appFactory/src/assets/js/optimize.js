@@ -3,14 +3,14 @@ import { Message, Notification } from "element-ui";
 
 Message.loading = function (config) {
   if (typeof config === "string") {
-    return ElementUI.Message({
+    return Message({
       type: "info",
       message: config,
       duration: 0,
       iconClass: "el-icon-loading",
     });
   } else {
-    return ElementUI.Message({
+    return Message({
       type: "info",
       message: "正在加载...",
       duration: 0,
@@ -22,13 +22,13 @@ Message.loading = function (config) {
 
 Notification.loading = function (config) {
   if (typeof config === "string") {
-    return ElementUI.Notification({
+    return Notification({
       message: config,
       duration: 0,
       iconClass: "el-icon-loading",
     });
   } else {
-    return ElementUI.Notification({
+    return Notification({
       message: "正在加载...",
       duration: 0,
       iconClass: "el-icon-loading",

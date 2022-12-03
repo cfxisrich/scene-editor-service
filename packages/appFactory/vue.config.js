@@ -1,10 +1,11 @@
 const path = require("path");
 const configureWebpack = require("./utils/configureWebpack");
 const devServer = require("./utils/devServer");
+const build = require("./build.json");
 
 module.exports = {
   runtimeCompiler: true,
-  publicPath: "./",
+  publicPath: build.publicPath,
   productionSourceMap: process.env.NODE_ENV !== "production",
   pluginOptions: {
     "style-resources-loader": {
@@ -14,4 +15,10 @@ module.exports = {
   },
   devServer,
   configureWebpack,
+  chainWebpack: (config) => {
+    config.plugin("html").tap((args) => {
+      args[0].title = build.title;
+      return args;
+    });
+  },
 };
