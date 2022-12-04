@@ -17,7 +17,7 @@ sql 相关：`mysql`、`mysql-workbench`，位于`assets`文件夹
 - node: 14.20.0
 - npm: 6.14.17
 - nestjs: 9.0.0
-- mysql: 9.0.29
+- mysql: 8.0.29
 
 ## 演示教程
 
