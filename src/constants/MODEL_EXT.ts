@@ -3,4 +3,5 @@ export default {
   '.glb': true,
   '.gltf': true,
   '.pmx': true,
+  '.fbx': true,
 };

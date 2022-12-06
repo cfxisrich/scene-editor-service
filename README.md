@@ -2,7 +2,14 @@
 
 [vis-three 框架](https://github.com/Shiotsukikaedesari/vis-three)衍生出的自定义编辑器类应用的后台服务。
 
+<p>
+  <img alt="NPM" src="https://img.shields.io/badge/license-MIT-blue">
+  <img alt="verison" src="https://img.shields.io/badge/version-0.3.2-light">
+</p>
+
 > 本项目仅为产品 DEMO，并不是完整产品，作者主要提供产品思路与实现思路，所以会存在许多 bug 或者交互方面的问题，本项目也为开源项目，欢迎大家动手完善。
+
+> 本项目使用中遇到的 bug 或者交互问题，欢迎提 issue。
 
 ## 项目相关
 
