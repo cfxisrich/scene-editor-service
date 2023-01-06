@@ -132,6 +132,9 @@ const rmdir = (path: string) => {
 
 const mkdir = (path: string) => {
   return new Promise((resolve, reject) => {
+    if (fs.existsSync(path)) {
+      resolve(true);
+    }
     fs.mkdir(path, (err) => {
       if (err) {
         reject(err);

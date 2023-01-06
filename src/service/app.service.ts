@@ -5,6 +5,7 @@ import {
   StreamableFile,
 } from '@nestjs/common';
 import RESOURCES_PATH, {
+  APP_PATH,
   MODEL_PATH,
   TEXTURE_PATH,
 } from '../constants/RESOURCES_PATH';
@@ -33,7 +34,7 @@ export class AppService {
   };
 
   private factoryPath = path.resolve(process.cwd(), `./packages/appFactory`);
-  private rootPath = path.resolve(RESOURCES_PATH, './app');
+  private rootPath = APP_PATH;
 
   constructor(
     @InjectRepository(App) private appRepository: Repository<App>,
