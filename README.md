@@ -7,24 +7,29 @@
   <img alt="verison" src="https://img.shields.io/badge/version-0.3.2-light">
 </p>
 
-> 本项目仅为产品 DEMO，并不是完整产品，作者主要提供产品思路与实现思路，所以会存在许多 bug 或者交互方面的问题，本项目也为开源项目，欢迎大家动手完善。
+### 项目说明
 
-> 本项目使用中遇到的 bug 或者交互问题，欢迎提 issue。
+1. 由于资金人手有限，本项目仅可以作为产品 DEMO，并不可以作为完整产品，作者主要提供产品思路与实现思路，所以会存在许多 bug 或者交互方面的问题。
 
-## 项目相关
+2. 本项目为`MIT`开源项目，如果大家有能力或者有时间，欢迎动手完善当中遇到的 bug 或者疏漏提交 pr。
 
-nest.js 框架
+3. 如果你是使用者，本项目使用中遇到的 bug 或者交互问题，欢迎提 issue 作者会根据情况取舍修复。
 
-sql 相关：`mysql`、`mysql-workbench`，位于`assets`文件夹
+## 交流合作与项目功能更新
 
-相关技术栈详情，项目命令详情可查看：package.json
+QQ 群：1025827206
 
-### 环境说明
+### 你需要准备的环境说明
 
 - node: 14.20.0
 - npm: 6.14.17
 - nestjs: 9.0.0
 - mysql: 8.0.29
+- sql 相关：`mysql`、`mysql-workbench`，位于`assets`文件夹
+
+## 项目相关
+
+相关技术栈详情，项目命令详情可查看：package.json
 
 ## 演示教程
 
@@ -38,13 +43,7 @@ sql 相关：`mysql`、`mysql-workbench`，位于`assets`文件夹
 
 ## 版权与支持
 
-本项目的 license 为`MIT`，这个 license 对于目前的环境也只是一个提示作用，大家都不容易，如果你觉得本项目对你有所帮助，或者能对你产生收益，那么在你获益之余，可以来这里支持我：[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)，支持形式可以采取充电或者你的一键三连，大家根据能力进行就行。
-
-你的支持是这个项目与[vis-three 框架](https://github.com/Shiotsukikaedesari/vis-three)乃至其他产品的发展动力，如果作者的收入能够平衡生存生活，后面会开源更多的项目源码。
-
-## 交流合作
-
-QQ 群：1025827206
+本项目的 license 为`MIT`，如果你觉得本项目对你有所帮助，或者能对你产生收益，那么在你获益之余，可以来这里支持我：[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)，支持形式可以采取充电或者你的一键三连，大家根据能力进行就行。
 
 ## 贡献者
 
@@ -74,6 +73,9 @@ QQ 群：1025827206
 </a>
 <a href="https://space.bilibili.com/7311750">
   <img src="https://i0.hdslb.com/bfs/face/94ad232ecb3b09b4c39ccad1fe5d1d7c613035e8.jpg@100w_100h_1c_1s.webp" />
+</a>
+<a href="https://space.bilibili.com/281443965/">
+  <img src="https://i0.hdslb.com/bfs/face/member/noface.jpg@100w_100h_1c_1s.webp" />
 </a>
 
 > 排名不分先后，本栏记录 2022/11/22 号之后的充电支持记录，感谢各位。

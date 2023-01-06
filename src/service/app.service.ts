@@ -2,6 +2,7 @@ import {
   Injectable,
   InternalServerErrorException,
   Logger,
+  OnModuleInit,
   StreamableFile,
 } from '@nestjs/common';
 import RESOURCES_PATH, {
@@ -24,9 +25,10 @@ import { AddClassifyDTO } from '../DTO/model.dto';
 import { AppClassifyDetailVO, AppDetailVO } from '../VO/app.vo';
 import { LogServerErrorException } from '../exception/LogServerErrorException';
 import { LogBadRequestException } from '../exception/LogBadRequestException';
+import { spawn } from 'child_process';
 
 @Injectable()
-export class AppService {
+export class AppService implements OnModuleInit {
   private appsStructure = {
     config: 'app.json',
     preview: 'preview.png',
@@ -44,6 +46,15 @@ export class AppService {
     private modelService: ModelService,
     private componentService: ComponentService,
   ) {}
+  onModuleInit() {
+    // 校验 factory依赖
+    if (!fs.existsSync(path.resolve(this.factoryPath, `./node_modules`))) {
+      spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['i'], {
+        cwd: this.factoryPath,
+        stdio: 'inherit',
+      });
+    }
+  }
 
   private transPath(url: string) {
     return url
