@@ -22,3 +22,7 @@ FileUtil.mkdir(TEXTURE_PATH);
 export const COMPONENT_PATH = path.resolve(RESOURCES_PATH, './component');
 
 FileUtil.mkdir(COMPONENT_PATH);
+
+export const TEMPLATE_PATH = path.resolve(RESOURCES_PATH, './template');
+
+FileUtil.mkdir(TEMPLATE_PATH);

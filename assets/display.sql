@@ -168,6 +168,41 @@ CREATE TABLE IF NOT EXISTS `display`.`texture_classify` (
   PRIMARY KEY (`id`));
 
 
+-- -----------------------------------------------------
+-- Table `display`.`template`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `display`.`template` ;
+
+CREATE TABLE IF NOT EXISTS `display`.`template` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `classify_id` INT UNSIGNED NOT NULL COMMENT '分类ID',
+  `template_name` VARCHAR(64) NOT NULL COMMENT '模板名称',
+  `preview_name` VARCHAR(32) NULL,
+  `package_path` VARCHAR(255) NOT NULL COMMENT '应用路径',
+  `delete` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `version` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`));
+
+
+-- -----------------------------------------------------
+-- Table `display`.`template_classify`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `display`.`template_classify` ;
+
+CREATE TABLE IF NOT EXISTS `display`.`template_classify` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `parent_id` INT UNSIGNED NULL,
+  `classify_name` VARCHAR(64) NOT NULL,
+  `level` INT(2) UNSIGNED NOT NULL DEFAULT 0,
+  `delete` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `version` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`));
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
