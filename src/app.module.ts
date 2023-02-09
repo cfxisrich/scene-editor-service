@@ -10,6 +10,7 @@ import { ModelModule } from './module/model.module';
 import { ComponentsModule } from './module/component.module';
 import { WsModule } from './module/ws.module';
 import { TextureModule } from './module/texture.module';
+import { TemplateModule } from './module/template.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { TextureModule } from './module/texture.module';
     TextureModule,
     ComponentsModule,
     WsModule,
+    TemplateModule,
   ],
   controllers: [AppController],
   providers: [AppService],
