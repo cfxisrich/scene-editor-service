@@ -39,6 +39,7 @@ resources/app/**/*
 resources/component/**/*
 resources/model/**/*
 resources/texture/**/*
+resources/template/**/*
 temp/
 packages/appFactory/dist
 packages/appFactory/public/model

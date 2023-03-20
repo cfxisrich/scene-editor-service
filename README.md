@@ -50,38 +50,3 @@ QQ 群：1025827206
 <a href="https://github.com/Shiotsukikaedesari/display-service/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Shiotsukikaedesari/display-service" />
 </a>
-
-## 赞助者
-
-<a href="https://space.bilibili.com/581519199">
-  <img src="https://i0.hdslb.com/bfs/face/61b6e85db9f26e305283e32d5be7a43a0a3319b9.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/355100720">
-  <img src="https://i0.hdslb.com/bfs/face/member/noface.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/9056896">
-  <img src="https://i1.hdslb.com/bfs/face/1e250d4d02d7bca230cbcde99be3f4a5dbb9b3ee.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/138522983">
-  <img src="https://i2.hdslb.com/bfs/face/8e92bcd280d12de7025a023548fc1636753dcb6e.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/318870619">
-  <img src="https://i1.hdslb.com/bfs/face/5820ce47b61cc7f1ea4e383139b9030a98d81dc6.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/13654749">
-  <img src="https://i1.hdslb.com/bfs/face/124dc5322efe5644366622c25e3a02f2c07ea499.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/7311750">
-  <img src="https://i0.hdslb.com/bfs/face/94ad232ecb3b09b4c39ccad1fe5d1d7c613035e8.jpg@100w_100h_1c_1s.webp" />
-</a>
-<a href="https://space.bilibili.com/281443965/">
-  <img src="https://i0.hdslb.com/bfs/face/member/noface.jpg@100w_100h_1c_1s.webp" />
-</a>
-
-> 排名不分先后，本栏记录 2022/11/22 号之后的充电支持记录，感谢各位。
-
-## 赞助商
-
-<a href="https://www.fanvfx.com.cn/#/">
-  <img src="/readme/sponser/huanjie.png" />
-</a>

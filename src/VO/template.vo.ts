@@ -20,6 +20,10 @@ export class AddTemplateVO extends ObjectConstructor<AddTemplateVO> {
 
   @Expose()
   @IsString()
+  config: string;
+
+  @Expose()
+  @IsString()
   preview: string;
 }
 

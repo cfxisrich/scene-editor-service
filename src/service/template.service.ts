@@ -91,12 +91,16 @@ export class TemplateService {
 
     await Promise.all(createFilePromiseList);
 
-    if (template.preview.length) {
+    await Promise.all([
+      FileUtil.writeFile(
+        `${tplDir}/${this.packageStructure.config}`,
+        template.config,
+      ),
       await FileUtil.writeFile(
         `${tplDir}/${this.packageStructure.preview}`,
         ImageUtil.decodeBase64(template.preview),
-      );
-    }
+      ),
+    ]);
 
     const result = await this.tplRepo.update(
       { id: resultTpl.id },
@@ -115,13 +119,13 @@ export class TemplateService {
       );
     }
 
-    return new AppDetailVO({
+    return new TemplateDetailVO({
       id: resultTpl.id,
       name: template.templateName,
       classifyId: template.classifyId,
       modifyTime: new Date().toISOString(),
       preview: this.transPath(`${tplDir}/${this.packageStructure.preview}`),
-      app: this.transPath(`${tplDir}/${this.packageStructure.config}`),
+      config: this.transPath(`${tplDir}/${this.packageStructure.config}`),
     });
   }
 
@@ -161,7 +165,7 @@ export class TemplateService {
         ...models.map((elem) => {
           return new TemplateDetailVO({
             id: elem.id,
-            name: elem.createTime,
+            name: elem.templateName,
             preview: this.transPath(
               `${elem.packagePath}/${this.packageStructure.preview}`,
             ),
