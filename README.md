@@ -15,10 +15,6 @@
 
 3. 如果你是使用者，本项目使用中遇到的 bug 或者交互问题，欢迎提 issue 作者会根据情况取舍修复。
 
-## 交流合作与项目功能更新
-
-QQ 群：1025827206
-
 ## 你需要准备的环境说明
 
 - node: 14.20.0
@@ -31,19 +27,74 @@ QQ 群：1025827206
 
 相关技术栈详情，项目命令详情可查看：package.json
 
-## 演示教程
+## 关于 issue
 
-[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)
+### 为何要特别的进行 issue 的管理？
 
-## 项目关联
+1、 项目人员较少，需要有一套平衡生活，工作，开源的模式。
 
-- [vis-three 框架](https://github.com/Shiotsukikaedesari/vis-three)
-- [three-vis-display-editor](https://github.com/Shiotsukikaedesari/three-vis-display-editor)
-- [项目展厅](https://github.com/Shiotsukikaedesari/vis-three-exhibition-hall)
+2、同一个问题会有很多人遇到，需要有一套避免重复提问与回答的模式。
 
-## 版权与支持
+3、避免过强的依赖，需要有一套平衡 issue 难易与 issue 频率的模式。
 
-本项目的 license 为`MIT`，如果你觉得本项目对你有所帮助，或者能对你产生收益，那么在你获益之余，可以来这里支持我：[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)，支持形式可以采取充电或者你的一键三连，大家根据能力进行就行。
+### issue 流程
+
+1、历史 issue 查找，避免重复提及。
+
+2、没有相关 issue，进行 issue 的新增。
+
+3、等待开发组进行 issue 的分类。
+
+4、进入赞助、合作、通知群进行赞助协商与 issue 完成度确认。
+
+### 关于 issue 分类
+
+对于所有的 issue，开发组会根据场景分配相关的标签。
+
+<img src="/readme/github-label.png" height=550>
+
+开发组罗列以下几个标签作为付费赞助支持点：
+
+- 新增标签
+- 文档标签
+- 演示标签
+- 提问标签
+
+### 关于赞助模式
+
+**开发与赞助额度**：由于不同需求工作量会不同，具体赞助额度可进入**下方 Q 群**中商讨，群内会有赞助标准与讨论空间。
+
+**多人赞助**：如果多人所提 issue 在功能需求上差不多，可进行 iusse 与赞助分摊合并，方便你我他。
+
+**赞助鸣谢**：赞助后的相关信息会计入下方的赞助名单中公开。
+
+**诚信与公益**：如果您非常需要一个功能，而暂时又无法达成赞助条件，我们可以为您提供帮助，因为我们相信人都是善良与真诚的。如果您提的需求或功能非常的有价值与富有建设性，我们会把它纳入开发核心流程，并不需要赞助费用，因为这个需求或功能已经非常有含金量。
+
+### 模式举例
+
+**支持平台**：[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)
+
+> 公开平台可以追寻赞助记录，平台抽成当交税与流量支持。
+
+**支持形式**：充电与留言
+
+> 留言请带上仓库名，issue 标题与 ID，如：【vis-three-display-editor】#15 材质—贴图设置 BUG
+
+## 贡献者与开发组
+
+**成为贡献者**：提交您的代码并通过审核。
+
+**开发收益**：如果您完成了相关的 issue，并且这个 issue 是属于**付费赞助支持**部分的，您将收到此 issue 的**全额赞助费用**，收益模式可根据上方**赞助模式**和**模式举例**进行。
+
+**开发鸣谢**：只要提交并通过代码审核，您就会自动成为贡献者并记录于下方的贡献者名单中。
+
+## 赞助、合作、通知
+
+- QQ 群：586362945
+
+## 前端交流
+
+- QQ 群： 1025827206
 
 ## 贡献者
 
@@ -85,3 +136,13 @@ QQ 群：1025827206
 <a href="https://www.fanvfx.com.cn/#/">
   <img src="/readme/sponser/huanjie.png" />
 </a>
+
+## 演示教程
+
+[https://space.bilibili.com/3048588](https://space.bilibili.com/3048588)
+
+## 项目关联
+
+- [vis-three 框架](https://github.com/Shiotsukikaedesari/vis-three)
+- [three-vis-display-editor](https://github.com/Shiotsukikaedesari/three-vis-display-editor)
+- [项目展厅](https://github.com/Shiotsukikaedesari/vis-three-exhibition-hall)
