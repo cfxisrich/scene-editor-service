@@ -2,8 +2,7 @@ import path from 'path';
 import FileUtil from '../util/FileUtil';
 
 const RESOURCES_PATH = path.resolve(process.cwd(), './resources');
-
-FileUtil.mkdir(RESOURCES_PATH);
+FileUtil.mkdir(process.cwd());
 
 export default RESOURCES_PATH;
 
